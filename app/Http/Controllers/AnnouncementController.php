@@ -18,6 +18,7 @@ class AnnouncementController extends Controller
 
      public function createAnnouncement()
      {
+        $title = "Crea un annuncio";
         return view('announcements.create');
      }
     public function index()
@@ -46,7 +47,7 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcements)
     {
-        //
+       
     }
 
     /**

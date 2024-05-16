@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
@@ -16,6 +17,7 @@ Route::get('/chi-sono', [PageController::class, 'aboutMe'])->name('about-me');
 
 
 
+
 Route::prefix('account')->middleware('auth')->group(function () {
 
     Route::get('/', [App\Http\Controllers\AccountController::class, 'index'])->name('account.index');
@@ -23,3 +25,5 @@ Route::prefix('account')->middleware('auth')->group(function () {
 });
 
 Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
+
+Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
