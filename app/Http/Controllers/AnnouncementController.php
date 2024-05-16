@@ -11,6 +11,11 @@ class AnnouncementController extends Controller
      * Display a listing of the resource.
      */
 
+     public function redirectTo()
+     {
+        return route('announcements.create');
+     }
+
      public function createAnnouncement()
      {
         return view('announcements.create');

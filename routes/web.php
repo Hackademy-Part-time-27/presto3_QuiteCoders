@@ -22,4 +22,4 @@ Route::prefix('account')->middleware('auth')->group(function () {
 
 });
 
-Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
+Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');

@@ -12,14 +12,14 @@
           <a class="nav-link" href="">Annunci</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="{{ route('announcements.create') }}">Nuovo annuncio</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         @auth
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ route('announcements.create') }}">Nuovo annuncio</a>
+        </li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ auth()->user()->email }}
