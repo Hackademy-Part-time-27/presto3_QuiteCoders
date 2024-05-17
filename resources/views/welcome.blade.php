@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h1 class="title-blue">{{ $title }}</h1>
-                @auth
+               
                 <p class="h2 my-2 fw-bold">Ecco i nostri annunci</p>
                 <div class="row">
                     @foreach ($announcements as $announcement)
@@ -24,9 +24,7 @@
                         </div>
                         @endforeach
                 </div>
-                @else
-                    <p class="h4 my-4">Per visualizzare gli annunci, effettua il login.</p>
-                @endauth
+               
             </div>
         </div>
     </div>
