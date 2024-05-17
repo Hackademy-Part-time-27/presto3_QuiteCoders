@@ -24,7 +24,7 @@ class CreateAnnouncement extends Component
 
     protected $messages = [
         'required'=>'Il campo :attribute è richiesto',
-        'min'=> 'Il campo :attribute è troppo corto',
+        'min'=> 'Il campo :attribute deve contenere almeno 4 caratteri',
         'numeric'=> 'Il campo :attribute dev\'essere un numero',
     ];
     

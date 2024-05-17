@@ -9,6 +9,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
+          <a class="nav-link dropdown-toggle" href="
+          #" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
+          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+            @foreach($categories as $category)
+            <li>
+              <a href="{{ route('categoryShow', compact('category'))}}" class="dropdown-item">{{ ($category->name) }}</a>
+              <li><hr class="dropdown-divider"></li>
+            </li>
+            @endforeach
+          </ul>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="{{ route('welcome') }}">Annunci</a>
         </li>
         <li class="nav-item">

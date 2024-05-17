@@ -16,8 +16,6 @@ Route::post('/contatti/send', [ContactController::class, 'send'])->name('contact
 Route::get('/chi-sono', [PageController::class, 'aboutMe'])->name('about-me');
 
 
-
-
 Route::prefix('account')->middleware('auth')->group(function () {
 
     Route::get('/', [App\Http\Controllers\AccountController::class, 'index'])->name('account.index');
@@ -27,3 +25,5 @@ Route::prefix('account')->middleware('auth')->group(function () {
 Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
 
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
+
+Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
