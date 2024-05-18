@@ -1,8 +1,7 @@
-<x-layout :title="$title">
+<x-layout :title="$category->name">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="title-blue">{{ $title }}</h1>
                
                 <p class="h2 my-2 fw-bold">Esplora la categoria {{ $category->name }}</p>
                 <div class="row">
@@ -22,8 +21,8 @@
                         </div>
                         @empty
                         <div class="col-12">
-                            <p class="h1">Non sono presenti annunci per questa categoria!</p>
-                            <p class="h2">Pubblicane uno: <a href="{{ route('announcements.create') }}"><button class="btn btn-success shadow">Nuovo Annuncio</button></a></p>
+                            <p class="h1 mt-4">Non sono presenti annunci per questa categoria!</p>
+                            <p class="h2 mt-4">Pubblicane uno: <a href="{{ route('announcements.create') }}"><button class="btn btn-success shadow">Nuovo Annuncio</button></a></p>
                         </div>
                         @endforelse
                 </div>
