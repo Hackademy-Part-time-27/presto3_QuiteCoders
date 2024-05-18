@@ -21,9 +21,10 @@ class AnnouncementController extends Controller
         $title = "Crea un annuncio";
         return view('announcements.create');
      }
-    public function index()
+    public function indexAnnouncement()
     {
-        //
+        $announcements = Announcement::paginate(5);
+        return view('announcements.index', compact('announcements'));
     }
 
     /**
@@ -45,9 +46,9 @@ class AnnouncementController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Announcement $announcements)
+    public function showAnnouncement(Announcement $announcement)
     {
-        //
+        return view('announcements.show', compact('announcement'));
 
     }
 

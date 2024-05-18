@@ -6,6 +6,5 @@
                 </div>
             </div>
         </div>
-    </div>
 
 </x-layout>

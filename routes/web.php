@@ -22,8 +22,18 @@ Route::prefix('account')->middleware('auth')->group(function () {
 
 });
 
-Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
+
 
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
-Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])
+->name('category.show');
+
+Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')
+->name('announcements.create');
+
+Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])
+->name('announcements.show');
+
+Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnouncement'])
+->name('announcements.index');

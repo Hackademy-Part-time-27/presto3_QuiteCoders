@@ -14,14 +14,14 @@
           <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
             @foreach($categories as $category)
             <li>
-              <a href="{{ route('categoryShow', compact('category'))}}" class="dropdown-item">{{ ($category->name) }}</a>
+              <a href="{{ route('category.show', compact('category'))}}" class="dropdown-item">{{ ($category->name) }}</a>
               <li><hr class="dropdown-divider"></li>
             </li>
             @endforeach
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('welcome') }}">Annunci</a>
+          <a class="nav-link" href="{{ route('announcements.index')}}">Annunci</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
