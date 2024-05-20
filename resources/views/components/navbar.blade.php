@@ -23,6 +23,17 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('announcements.index')}}">Annunci</a>
         </li>
+        @if (auth::user()->is_revisor)
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{ route('revisor.index') }}">
+            zona revisore
+            <span class="position-absolute top-0 dtart-100 translate-middle badge rounded-pill bg-danger">
+              {{App\Models\Announcement::toBeRevisionedCount()}}
+              <span class= "visually-hidden">unread messages</span>
+            </span>
+          </a>
+          @endif
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
         </li>

@@ -37,3 +37,9 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 
 Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnouncement'])
 ->name('announcements.index');
+
+route::get('/revisor/home', [RevisorController::class,'index'])->name('revisor.index');
+
+route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnuncement'])->name('revisor.accept_announcement');
+
+route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnuncement'])->name('revisor.reject_announcement');
