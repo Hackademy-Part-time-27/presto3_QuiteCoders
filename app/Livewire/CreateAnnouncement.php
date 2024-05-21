@@ -17,7 +17,7 @@ class CreateAnnouncement extends Component
     
     protected $rules = [
         'title' =>'required|min:4',
-        'body' =>'required|min:8',
+        'body' =>'required|min:4',
         'category' =>'required',
         'price' =>'required|numeric',
     ];
@@ -26,6 +26,13 @@ class CreateAnnouncement extends Component
         'required'=>'Il campo :attribute è richiesto',
         'min'=> 'Il campo :attribute deve contenere almeno 4 caratteri',
         'numeric'=> 'Il campo :attribute dev\'essere un numero',
+    ];
+
+    protected $validationAttributes = [
+        'title' => 'titolo',
+        'body' => 'descrizione',
+        'category' => 'categoria',
+        'price' => 'prezzo',
     ];
     
 
