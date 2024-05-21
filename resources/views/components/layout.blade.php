@@ -18,6 +18,7 @@
     </div>
     {{ $extra ?? '' }}    
 
+    <x-footer />
     @livewireScripts
 </body>
 </html>

@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\FrontController;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\FrontController;
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
 Route::get('/', [PageController::class, 'welcome'])->name('welcome');
@@ -38,8 +39,11 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnouncement'])
 ->name('announcements.index');
 
-route::get('/revisor/home', [RevisorController::class,'index'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 
-route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnuncement'])->name('revisor.accept_announcement');
+Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
 
-route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnuncement'])->name('revisor.reject_announcement');
+Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
+
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');

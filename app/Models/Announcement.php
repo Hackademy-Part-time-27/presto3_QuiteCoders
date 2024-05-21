@@ -29,6 +29,6 @@ class Announcement extends Model
 
     public static function toBeRevisionedCount()
     {
-        return Annoucement::where('is_accepted', null)->count();
+        return Announcement::where('is_accepted', null)->count();
     }
 }

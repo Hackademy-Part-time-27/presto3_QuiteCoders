@@ -23,7 +23,8 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('announcements.index')}}">Annunci</a>
         </li>
-        @if (auth::user()->is_revisor)
+        @auth
+        @if (Auth::user()->is_revisor)
         <li class="nav-item">
           <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{ route('revisor.index') }}">
             zona revisore
@@ -32,8 +33,11 @@
               <span class= "visually-hidden">unread messages</span>
             </span>
           </a>
-          @endif
         </li>
+          @endif
+          
+          @endauth
+        
         <li class="nav-item">
           <a class="nav-link" href="{{ route('contacts') }}">Contatti</a>
         </li>

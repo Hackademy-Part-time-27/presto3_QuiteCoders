@@ -11,7 +11,7 @@ class FrontController extends Controller
     public function welcome () {
         
         $title = "";
-        $announcements = Announcement::latest()->take(6)->get();
+        $announcements = Announcement::where('is_accepted', true)->latest()->take(6)->get();
         
         return view('welcome', compact('title', 'announcements'));
     }
