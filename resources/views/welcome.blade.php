@@ -35,7 +35,7 @@
 
                         <div class="col-12">
                             <div class="alert alert-warning py-3 shadow">
-                                <h2 class="lead">Non sono stati ancora caricare articoli. Creane uno!</h2>
+                                <h2 class="lead">Non sono stati ancora caricati articoli. Creane uno!</h2>
                             </div>
                         </div>
 
