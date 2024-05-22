@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="row">
-                    @foreach ($announcements as $announcement)
+                    @forelse ($announcements as $announcement)
                     <div class="col-12 col-md-4 my-4">
                         <div class="card-shadow" style="width: 18rem;">
                             <img src="https://picsum.photos/200" class="card-image-top p-3 rounded" alt="...">
@@ -28,7 +28,16 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+
+                    @empty 
+
+                    <div class="col-12">
+                        <div class="alert alert-warning py-3 shadow">
+                            <h2 class="lead">Non sono stati ancora caricare articoli. Creane uno!</h2>
+                        </div>
+                    </div>
+
+                    @endforelse
                     {{ $announcements->links() }}
                 </div>
             </div>

@@ -9,10 +9,12 @@
                       {{ session('access.denied')}}
                     </div>
                 @endif
+
+                
                
                 <p class="h2 my-2 fw-bold">Ecco i nostri annunci</p>
                 <div class="row">
-                    @foreach ($announcements as $announcement)
+                    @forelse ($announcements as $announcement)
                         <div class="col-12 col-md-4 my-4">
                             <div class="card shadow" style="width: 18rem;">
                                 <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" class="card-img-top p-3 rounded" alt="...">
@@ -28,7 +30,16 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+
+                        @empty 
+
+                        <div class="col-12">
+                            <div class="alert alert-warning py-3 shadow">
+                                <h2 class="lead">Non sono stati ancora caricare articoli. Creane uno!</h2>
+                            </div>
+                        </div>
+
+                        @endforelse
                 </div>
                
             </div>

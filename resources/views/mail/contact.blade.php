@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Presto.it</title>
 </head>
 <body>
-    Hai ricevuto un nuovo messaggio dal Blog: {{ config('app.name') }}
-    <br>
-    Email: {{ $email }}<br>
-    Messaggio: {!! nl2br(e($content)) !!}
+   <div>
+    <h1>Un utente ha espresso la volontà di lavorare con noi!</h1>
+    <h2>Di seguito i suoi dati:</h2>
+    <p>Nome: {{ $user->name}}</p>
+    <p>Email: {{ $user->email}}</p>
+    <p>Se vuoi renderlo revisore clicca qui:</p>
+    <a href="{{route('make.revisor', compact('user'))}}">Rendi revisore</a>
+   </div>
 </body>
 </html>
+
