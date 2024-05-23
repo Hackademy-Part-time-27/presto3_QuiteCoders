@@ -1,2 +1,264 @@
 @import "bootstrap";
 
+.bgblue{
+    background-color: #571ACF;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    
+}
+
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+  }
+  
+  .input {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 45px;
+    padding-left: 2.5rem;
+    box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+    border: 0;
+    border-radius: 12px;
+    background-color: #16171d;
+    outline: none;
+    color: #bdbecb;
+    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: text;
+    z-index: 0;
+  }
+  
+  .input::placeholder {
+    color: #bdbecb;
+  }
+  
+  .input:hover {
+    box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+  }
+  
+  .input:active {
+    transform: scale(0.95);
+  }
+  
+  .input:focus {
+    box-shadow: 0 0 0 2.5px #2f303d;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    fill: #bdbecb;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+ 
+  .but {
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 4px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .but:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  }
+  
+  .but:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+  
+  :root {
+
+    --color-border:rgb(255 255 255/ 16%);
+  }
+body {
+
+    font-family: "Poppins"; 
+    color: #f7f7f7;
+    background: #181818;
+}
+
+.foot {
+    margin: 0;
+    background: linear-gradient(172deg, #6644ff 50%, #ff99dd 300%);
+    font-family: "Euclid Circular A", "Poppins";
+    color: #f7f7f7;
+  }
+  
+  html,
+  .foot{
+    height: 100%;
+  }
+  
+  section {
+    left: 0;
+    bottom: 12px;
+    width: 100%;
+    background: #172940;
+    padding-top: 60px;
+  }
+  
+  footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0 30px;
+  }
+  
+  @media (width < 620px) {
+    footer {
+      flex-direction: column;
+    }
+  
+    footer.bottom {
+      gap: 16px;
+      flex-direction: column-reverse;
+    }
+  }
+    
+  @media (width >= 620px) {
+    footer {
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 0;
+    }
+  }
+  
+  footer {
+    color: #a2b5cd;
+  }
+  
+  footer.top {
+    border-bottom: 2px solid #3a4f6a;
+    padding-bottom: 20px;
+  }
+  
+  footer.bottom {
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+  
+  footer.top .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .links > div {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  footer h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f7f7f7;
+  }
+  
+  .legal {
+    font-size: 12px;
+  }
+  
+  .legal > a {
+    margin: 0 4px;
+  }
+  
+  .legal > span {
+    margin-right: 10px;
+  }
+  
+  footer.bottom .links {
+    display: flex;
+    gap: 18px;
+  }
+  
+  footer.bottom .links > a {
+    font-size: 24px;
+  }
+  
+  @media (width < 420px) {
+    footer {
+      text-align: center;
+      align-items: center;
+    }
+  
+    footer.top .links {
+      grid-template-columns: 1fr;
+    }
+  
+    footer.bottom {
+      align-items: center;
+    }
+  
+    .legal > span {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 2px;
+    }
+  }
+
+  .card {
+    width: 70%;
+    height: 100%;
+    background-image: linear-gradient(163deg, #9900ff 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+   }
+   
+   .card2 {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+   }
+
+   .well {
+    height: 100%;
+    margin-bottom: 500px;
+   }
+
+   .cane{
+    margin-top: 10px;
+    margin-bottom: 20px;
+   }
+
+   .bianco{
+    color: white;
+   }
+
+   .cate{
+    margin: 50px;
+   
+
+   }
+
