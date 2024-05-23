@@ -11,7 +11,7 @@ use Laravel\Scout\Searchable;
 class Announcement extends Model
 {
     use HasFactory, Searchable;
-    protected $fillable = ['title', 'body', 'price'];
+    protected $fillable = ['title', 'body', 'price',];
 
     public function toSearchableArray(){
         $category = $this->category;
@@ -42,7 +42,7 @@ class Announcement extends Model
     }
 
     public static function toBeRevisionedCount()
-    {
+    {    
         return Announcement::where('is_accepted', null)->count();
     }
 }
