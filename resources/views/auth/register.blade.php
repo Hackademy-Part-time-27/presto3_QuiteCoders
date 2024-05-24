@@ -26,7 +26,7 @@
                             <label for="password_confirmation">Conferma Password</label>
                             <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 spa">
                             <button type="submit" class="btn btn-primary">Registrati</button>
                         </div>
                     </div>

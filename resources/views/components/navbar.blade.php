@@ -10,7 +10,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link dropdown-toggle text-white" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
-          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+          <ul class="dropdown-menu mar dropdown-menu-dark" aria-labelledby="categoriesDropdown">
             @foreach($categories as $category)
             <li>
             <div class="dropdown">

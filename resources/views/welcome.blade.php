@@ -24,7 +24,7 @@
                                     <p class="bianco" >{{ $announcement->body }}</p>
                                     <p class="bianco" >{{ $announcement->price }}</p>
                                     <a href="{{ route('announcements.show', $announcement) }}" class="but link-offset-2 link-underline link-underline-opacity-0">Visualizza</a>
-                                    <a href="{{ route('category.show', ['category'=>$announcement->category]) }}" class="cate">Categoria: {{ $announcement->category->name }}</a>
+                                    <a href="{{ route('category.show', ['category'=>$announcement->category]) }}" class="cate link-offset-2 link-underline link-underline-opacity-0">Categoria: {{ $announcement->category->name }}</a>
                                     <p class="bianco">Pubblicato il: {{ $announcement->created_at
                                     ->format('d/m/Y') }}</p>
                                 </div>

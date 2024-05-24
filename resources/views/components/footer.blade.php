@@ -23,14 +23,11 @@
       </footer>
       <footer class="bottom">
         <div class="legal">
-          <span> © 2023 All rights reserved </span>
+          <span> © 2024 All rights reserved </span>
           <a> Hackademy </a>
           <a> part-time-27 </a>
-          <a> AULAB </a>
-        </div>
-        <div class="links">
-          <a class="fa-brands fa-github"></a>
-          <a class="fa-brands fa-linkedin"></a>
+          <strong> AULAB </strong>
+          <a href="{{ route('become.revisor') }}" class="btn btn-warning text-light shadow my-3">Diventa revisore!</a>
         </div>
       </footer>
     </section>
