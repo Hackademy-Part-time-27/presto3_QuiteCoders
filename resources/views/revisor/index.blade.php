@@ -9,7 +9,7 @@
         </div>
     </div>
     @if($announcement_to_check)
-    <div class="container">
+    <div class="container spa">
         <div class="row">
             <div class="col-12">
                 <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">

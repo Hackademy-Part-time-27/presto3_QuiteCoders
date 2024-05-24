@@ -34,7 +34,7 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Un\'utente ha richiesto di diventare revisore. Analizza la richiesta.',
+            subject: 'Un utente ha richiesto di diventare revisore. Analizza la richiesta.',
         );
     }
 
