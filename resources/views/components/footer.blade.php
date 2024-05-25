@@ -1,5 +1,3 @@
-
-
 <section class="foot">
       <footer class="top">
         <img src="" />
@@ -16,4 +14,4 @@
           <strong> AULAB </strong>
         </div>
       </footer>
-    </section>
+</section>

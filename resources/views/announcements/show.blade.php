@@ -6,35 +6,13 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container m-5">
         <div class="row">
             <div class="col-12">
-                <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/200" class="img-fluid p-3 rounded" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bd-target="#showCarousel" 
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria_hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="control-next" type="button" data-bs-target="#showCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+            <x-carosello />
                 <h5 class="card-title">Titolo: {{ $announcement->title }}</h5>
                 <p class="card-text">Descrizione: {{ $announcement->body }}</p>
-                <p class="card-text">Prezzo: {{ $announcement->price }}</p>
+                <p class="card-text">Prezzo: {{ $announcement->price }} €</p>
                 <a href="{{ route('category.show', ['category'=>$announcement->category]) }}" 
                 class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">
                 Categoria: {{ $announcement->category->name }}</a>

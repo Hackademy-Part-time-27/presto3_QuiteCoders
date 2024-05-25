@@ -1,11 +1,12 @@
 <x-layout>
-    <div class="container">
+    <div class=>
         <div class="row">
             <div class="col-12">
                 <h1 class="display-2">Ecco i nostri annunci</h1>
             </div>
         </div>
     </div>
+
     <div class="container spa">
         <div class="row">
             <div class="col-12">
@@ -17,7 +18,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $announcement->title }}</h5>
                                 <p class="card-text">{{ $announcement->body }}</p>
-                                <p class="card-text">{{ $announcement->price }}</p>
+                                <p class="card-text">{{ $announcement->price }} €
+                                    
+                                </p>
                                 <a href="{{ route('announcements.show', compact('announcement')) }}" 
                                 class="btn btn-primary shadow">Visualizza</a>
                                 <a href="{{ route('category.show', ['category'=>$announcement->category]) }}"
@@ -42,5 +45,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>                               
 </x-layout>
