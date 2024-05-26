@@ -1,4 +1,5 @@
 <x-layout title="Accedi">
+    <!--
     <div class="row">
         <div class="col-md-6 mx-auto">
             <h1>Accedi con il tuo Account</h1>
@@ -25,6 +26,29 @@
             </div>
         </div>
     </div>
-    
+-->
+
+<div class="scrol"></div>
+
+<div class="login-box">
+ 
+ <form action="/login" method="POST">
+ @csrf
+   <div class="user-box">
+     <input type="email" name="email" id="email" value="{{ old('email') }}">
+     <label for="email">Email</label>
+     @error('email') <span class="small text-danger">{{ $message }}</span> @enderror</span>
+   </div>
+   <div class="user-box">
+    <input type="password" name="password" id="password">
+     <label for="password" class="label">Password</label>
+     @error('password') <span class="small text-danger">{{ $message }}</span> @enderror</span>
+   </div>
+
+   <button class="btn bianco " type="submit"><a>Accedi<span></span></a></button>
+   
+   <a class="m-0" href="/register">Registrati</a></span>
+ </form>
+</div>
 
 </x-layout>
