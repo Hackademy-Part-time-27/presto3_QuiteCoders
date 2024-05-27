@@ -91,7 +91,7 @@
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Lingue
           </button>
-          <ul class="dropdown-menu mar dropdown-menu-dark">
+          <ul class="dropdown-menu dropdown-menu-end mar dropdown-menu-dark">
             <li class="nav-item dropdown-item">
                 <x-_locale lang="it"/>
             </li>
