@@ -82,7 +82,27 @@
         <input id="query" class="input form-control" type="search" placeholder="Cerca" name="searched">
     </div>
     <button class="but" type="submit">Cerca</button>
-</form>
+      </form>
     </div>
-  </div>
+    </div>
+    <div>
+
+      <div class="dropdown nav-link dropdown-toggle text-white">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Lingue
+          </button>
+          <ul class="dropdown-menu mar dropdown-menu-dark">
+            <li class="nav-item dropdown-item">
+                <x-_locale lang="it"/>
+            </li>
+            <li class="nav-item dropdown-item">
+                <x-_locale lang="en"/>
+            </li>
+            <li class="nav-item dropdown-item">
+                <x-_locale lang="es"/>
+            </li>
+          </ul>
+      </div>
+
+    </div>
 </nav>
