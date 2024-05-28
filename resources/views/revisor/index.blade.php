@@ -8,11 +8,24 @@
             </div>
         </div>
     </div>
+    <!-- inizio user story 5 minuto 23.35 (modificare carousel)-->
     @if($announcement_to_check)
     <div class="container spa">
         <div class="row">
             <div class="col-12">
-                <x-carosello />
+                <div id="showImages" class="caro" data-bs-ride="carousel">
+                    @if ($announcement_to_check->images)
+                    <div class="carousel-inner">
+                        @foreach ($announcement_to_check->images as $image)
+                    <div class="carousel-item @if($loop->first) active @endif">
+                    <img src="{{ Storage::url($image->path) }}" alt="..." class="img-fluid p-3 rounded">
+                    </div>
+                    @endforeach
+                </div>
+                @else
+                 <x-carosello />
+                </div>
+                @endif
                 <h5 class="card-title">Titolo: {{ $announcement_to_check->title }}</h5>
                 <p class="card-text">Descrizione: {{ $announcement_to_check->body }}</p>
                 <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>

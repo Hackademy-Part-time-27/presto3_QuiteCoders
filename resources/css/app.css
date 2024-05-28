@@ -486,5 +486,13 @@ body {
 .scrol{
   height: 550px;
   background-color: 0001;
-
 }
+
+.img-preview{
+  width: 25vh;
+  height: 20vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
