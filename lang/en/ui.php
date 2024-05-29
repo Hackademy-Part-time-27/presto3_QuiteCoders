@@ -3,7 +3,7 @@ return [
     'allAnnouncements'=>'Here\'s all our announcements!',
     'welcome'=>'Welcome to Presto.it!',
     'categories' => 'Categories',
-    'announcements' => 'Announcements',
+    'announcements' => 'Listings',
     'contacts' => 'Contacts',
     'register' => 'Sign In',
     'login' => 'Login',
@@ -11,7 +11,7 @@ return [
     'languages' => 'Languages',
     'published' => 'Published on',
     'view' => 'View',
-    'newAnnouncement' => 'New announcement',
+    'newAnnouncement' => 'New listing',
     'auditorArea' => 'Auditor area',
     'workWithUs' => 'Work with us!'
 ];
