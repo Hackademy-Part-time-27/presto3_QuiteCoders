@@ -16,4 +16,19 @@ class Image extends Model
     {
         return $this->belongsTo(Announcement::class);
     }
+
+    public function getUrlByFilePath($filePath , $w = null , $h = null){
+        if(!$w && !$h){
+            return Storage::url($filePath);
+        }
+        $path = dirname($filePath);
+        $filename = basemane($filePath);
+        $file = "{$path}/crop_{$w}x{$h}_{$filename}";
+
+        return Store::url($file);
+    }
+
+    public function getUrl($w = null , $h = null){
+        return Image::getUrlByFilePath($this->path, $w, $h);
+    }
 }
