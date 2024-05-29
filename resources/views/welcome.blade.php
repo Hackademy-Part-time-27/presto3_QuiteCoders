@@ -20,11 +20,11 @@
                                     <h5 class="bianco" >{{ $announcement->title }}</h5>
                                     <p class="bianco" >{{ $announcement->body }}</p>
                                     <p class="bianco" >{{ $announcement->price }} €</p>
-                                    <a href="{{ route('announcements.show', $announcement) }}" class="but link-offset-2 link-underline link-underline-opacity-0">Visualizza</a>
+                                    <a href="{{ route('announcements.show', $announcement) }}" class="but link-offset-2 link-underline link-underline-opacity-0">{{__('ui.view')}}</a>
                                     <p class="m-3">
                                     <a href="{{ route('category.show', ['category'=>$announcement->category]) }}" class="link-offset-2 link-underline link-underline-opacity-0">{{ $announcement->category->name }}</a>
                                     </p>
-                                    <p class="bianco">Pubblicato il: {{ $announcement->created_at
+                                    <p class="bianco">{{__('ui.published')}} {{ $announcement->created_at
                                     ->format('d/m/Y') }}</p>
                                 </div>
                                 
