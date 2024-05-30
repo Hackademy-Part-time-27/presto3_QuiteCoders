@@ -8,7 +8,7 @@ return [
     'register' => 'Sign In',
     'login' => 'Login',
     'search' => 'Search',
-    'languages' => 'Languages',
+    'languages' => 'Language',
     'published' => 'Published on',
     'view' => 'View',
     'newAnnouncement' => 'New listing',

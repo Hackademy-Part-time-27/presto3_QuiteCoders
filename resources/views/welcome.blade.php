@@ -1,7 +1,7 @@
 <x-layout :title="$title">
     <div class="container well">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mb-5">
                 <h1 class="title-blue">{{ __('ui.welcome') }}</h1>
 
                 @if (session()->has('access.denied'))
@@ -9,10 +9,10 @@
                       {{ session('access.denied')}}
                     </div>
                 @endif
-                <p class="h2 my-2 fw-bold">{{__('ui.allAnnouncements')}}</p>
+                <p class="h2 my-2 mt-5 fw-bold">{{__('ui.allAnnouncements')}}</p>
                 <div class="row">
                     @forelse ($announcements as $announcement)
-                        <div class="col-12 col-md-4 my-4">
+                        <div class="col-12 col-md-4 my-4 mt-5">
                             <div class="card">
                                 <div class="card2">
                                 <img class="cane img-fluid rounded" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200' }}" alt="...">

@@ -8,7 +8,7 @@ return [
     'register' => 'Registrati',
     'login' => 'Accedi',
     'search' => 'Cerca',
-    'languages' => 'Lingue',
+    'languages' => 'Lingua',
     'published' => 'Pubblicato il',
     'view' => 'Visualizza',
     'newAnnouncement' => 'Nuovo annuncio',

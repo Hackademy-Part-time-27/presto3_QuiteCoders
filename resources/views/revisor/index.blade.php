@@ -13,7 +13,7 @@
     <div class="container spa">
         <div class="row">
             <div class="col-12">
-                <div id="showImages" class="caro" data-bs-ride="carousel">
+                <div id="showImages" data-bs-ride="carousel">
                     @if ($announcement_to_check->images)
                     <div class="carousel-inner">
                         @foreach ($announcement_to_check->images as $image)
@@ -23,7 +23,6 @@
                     @endforeach
                 </div>
                 @else
-                 <x-carosello />
                 </div>
                 @endif
                 <h5 class="card-title">Titolo: {{ $announcement_to_check->title }}</h5>

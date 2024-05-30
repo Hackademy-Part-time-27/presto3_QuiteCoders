@@ -21,6 +21,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="scrol"></div>
                         @empty
                         <div class="col-12">
                             <p class="h1 mt-4">Non sono presenti annunci per questa categoria!</p>
@@ -32,6 +33,8 @@
             </div>
         </div>
     </div>
+    <div class="scrol"></div>
+
     
 
 </x-layout>

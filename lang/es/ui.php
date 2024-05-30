@@ -8,7 +8,7 @@ return [
     'register' => 'Iniciar Sesión',
     'login' => 'Acceso',
     'search' => 'Cerca',
-    'languages' => 'Idiomas',
+    'languages' => 'Idioma',
     'published' => 'Publicado en',
     'view' => 'Vista',
     'newAnnouncement' => 'Nuevo anuncio',

@@ -64,14 +64,15 @@
     height: 1rem;
     pointer-events: none;
     z-index: 1;
+    margin-right: 5px;
   }
  
   .but {
-    padding: 5px 20px;
+    padding: 5px 10px;
     border-radius: 50px;
     cursor: pointer;
     border: 4px;
-    margin: 10px;
+    
     background-color: white;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
@@ -229,8 +230,10 @@ body {
     }
   }
 
+  /* card*/
+
   .card {
-    width: 80%;
+    width: 68%;
     height: 110%;
     background-image: linear-gradient(163deg, #9900ff 0%, #3700ff 100%);
     border-radius: 20px;
@@ -368,7 +371,7 @@ body {
 }
 
 .accordion li:hover {
-  flex: 0 1 260px;
+  flex: 0 1 400px;
   scale: 1.1;
   z-index: 10;
   opacity: 1;
