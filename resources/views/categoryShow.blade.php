@@ -9,7 +9,7 @@
                         <div class="col-12 col-md-4 my-4">
                             <div class="card" >
                                 <div class="card2">
-                                    <img class="cane img-fluid" src="{{ !$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/200' }}" alt="...">
+                                    <img class="cane img-fluid" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200' }}" alt="...">
                                 <div >
                                     <h5 class="bianco" >{{ $announcement->title }}</h5>
                                     <p class="bianco">{{ $announcement->body }}</p>

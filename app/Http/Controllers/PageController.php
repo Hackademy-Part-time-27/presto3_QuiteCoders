@@ -14,19 +14,5 @@ class PageController extends Controller
 
         return view('welcome', compact('title'));
 
-    }
-
-    public function aboutMe()
-    {
-        $name = 'Giuseppe';
-
-        return view('pages.about-me', [
-            'title' => $name,
-            'description' => 'Laravel<br>Teacher',
-        ]);
-    }
-
-   
-
-    
+    }    
 }
