@@ -59,8 +59,8 @@
                         {{ auth()->user()->email }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="">Gestione Annunci</a></li>
-                        <hr class="dropdown-divider">
+                        <!--<li><a class="dropdown-item" href="">Gestione Annunci</a></li>
+                        <hr class="dropdown-divider">-->
                         <li>
                             <form action="/logout" method="POST">
                                 @csrf

@@ -8,6 +8,7 @@
             </div>
         </div>
     </div>
+    <div class="scrol"></div>
     <!-- inizio user story 5 minuto 23.35 (modificare carousel)-->
     @if($announcement_to_check)
     <div class="container spa">
