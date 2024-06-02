@@ -1,36 +1,26 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-gradient bg-success p-5 shadow mb-4">
-        <div class="row">
-            <div class="col-12 text-light p-5">
-                <h1 class="display-2">
-                    {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
-                </h1>
-            </div>
-        </div>
-    </div>
-    <div class="scrol"></div>
-    <!-- inizio user story 5 minuto 23.35 (modificare carousel)-->
+    <h1>
+        {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+    </h1>
     @if($announcement_to_check)
-    <div class="container spa">
-        <div class="row">
-            <div class="col-12">
-                <div id="showImages" data-bs-ride="carousel">
-                    @if ($announcement_to_check->images)
-                    <div class="carousel-inner">
-                        @foreach ($announcement_to_check->images as $image)
-                    <div class="carousel-item @if($loop->first) active @endif">
-                    <img src="{{ $image->getUrl(400,300) }}" alt="..." class="img-fluid p-3 rounded">
-                    </div>
-                    @endforeach
+    <div class="container scrol">
+        <div class="corpo">
+        @if ($announcement_to_check->images)
+            <div class="carousel" id="test1">
+            @foreach($announcement_to_check->images as $image)
+                <input class="input " type="radio" name="item" value="1" checked>
+                <div>
+                <img src="{{ $image->getUrl(400,300) }}">
                 </div>
-                @else
-                </div>
-                @endif
-                <h5 class="card-title">Titolo: {{ $announcement_to_check->title }}</h5>
-                <p class="card-text">Descrizione: {{ $announcement_to_check->body }}</p>
-                <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                @endforeach
+
             </div>
+            @endif
+            <h5 class="card-title">Titolo: {{ $announcement_to_check->title }}</h5>
+            <p class="card-text">Descrizione: {{ $announcement_to_check->body }}</p>
+            <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
         </div>
+
         <div class="row">
             <div class="col-12 col-md-6">
                 <form action="{{ route('revisor.accept_announcement', ['announcement'=> $announcement_to_check]) }}" method="POST">

@@ -1,14 +1,14 @@
-<div class="caro">
-<ul class="accordion">
+<div class="corpo">
+  <div class="carousel" id="test1">
   @foreach($images as $image)
+    <input class="input " type="radio" name="item" value="1" checked>
+    
+    <div>
+      <img src="{{ $image->getUrl(400,300) }}">
+    </div>
+    @endforeach
 
-      <li>
-        <img src="{{ $image->getUrl(400,300) }}" />
-        <div class="content">
-          <span>
-          </span>
-        </div>
-      </li>
-      @endforeach
-    </ul>
+  </div>
+
 </div>
+
