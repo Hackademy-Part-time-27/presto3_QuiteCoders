@@ -78,7 +78,7 @@
                 </li>
                 @endauth
             </ul>
-            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex mt-2 mt-lg-0">
+            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex mt-2 me-2 mt-lg-0">
                 <div class="input-group w-100 me-3">
                     <span class="input-group-text bg-white border-0">
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">

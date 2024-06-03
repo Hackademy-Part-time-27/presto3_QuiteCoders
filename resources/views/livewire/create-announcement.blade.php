@@ -50,6 +50,8 @@
             @enderror
         </div>
         @if (!empty($images))
+        <label for="image">Inserisci un immagine</label>
+
         <div class="row">
             <div class="col-12">
                 <p>Photo preview:</p>
