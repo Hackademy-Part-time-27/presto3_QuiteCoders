@@ -67,7 +67,7 @@
         </div>
         @endif
         
-        <button type="submit" class="btn btn-primary shadow px-4 py-2">Crea</button>
+        <button wire:loading.attr="disabled" type="submit" class="btn btn-primary shadow px-4 py-2">Crea</button>
 
     </form>
 </div>
