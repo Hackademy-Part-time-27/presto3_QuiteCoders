@@ -1,10 +1,11 @@
 <x-layout>
-    <h1>
+    <h1 class="container text-center">
         {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
     </h1>
     @if($announcement_to_check)
     <div class="container scrol">
-        <div class="corpo">
+        <div class="row">
+        <div class="corpo col-5">
         @if ($announcement_to_check->images)
             <div class="carousel" id="test1">
             @foreach($announcement_to_check->images as $image)
@@ -20,8 +21,8 @@
             <p class="card-text">Descrizione: {{ $announcement_to_check->body }}</p>
             <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
         </div> 
-        <div class="col-md-3">
-            <div class="card-body">
+        <div class="col-3">
+            <div class="card-body fs-5 text-lg-end p-5">
                 <h5 class="tc-accent">Revisione Immagini</h5>
                 <p>Adulti: <span class="{{$image->adult}}"></span></p>
                 <p>Satira: <span class="{{$image->spoof}}"></span></p>
@@ -30,6 +31,8 @@
                 <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
             </div>
         </div>
+        </div>
+
 
         <div class="row">
             <div class="col-12 col-md-6">
