@@ -27,10 +27,10 @@
                         @endif
                     </div>
                 </div>
-                @endforeach
+                
 
             </div>
-            @endif
+            
             <h5 class="card-title">Titolo: {{ $announcement_to_check->title }}</h5>
             <p class="card-text">Descrizione: {{ $announcement_to_check->body }}</p>
             <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
@@ -45,8 +45,9 @@
                 <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
             </div>
         </div>
+            @endforeach
         </div>
-
+            @endif
 
         <div class="row">
             <div class="col-12 col-md-6">

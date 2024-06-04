@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
@@ -93,10 +94,12 @@ class CreateAnnouncement extends Component
                 // $this->announcement->images()->create(['path'=> $image->store('images', 'public')]);
                 $newFileName ="announcements/{$this->announcement->id}";
                 $newImage=$this->announcement->images()->create(['path'=> $image->store($newFileName , 'public')]);
-                ResizeImage::withChain([
+
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path , 400 , 300),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id),
-                ])->dispatch($newImage->path , 400 , 300);
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
                 
             }
 

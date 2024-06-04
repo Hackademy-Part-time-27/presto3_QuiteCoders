@@ -21,7 +21,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
      */
     public function __construct($announcement_image_id)
     {
-       $this->$announcement_image_id = $announcement_image_id;
+       $this->announcement_image_id = $announcement_image_id;
     }
 
     /**
@@ -37,14 +37,14 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
         $image = file_get_contents(storage_path('app/public/' . $i->path));
 
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google.credential.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
         $imageAnnotator->close();
         
-        $safe = $response->getSafeSearchAnnotation();
-        Log::info($safe);
+        $safe = $response->getSafeSearchAnnotation();   
+        //Log::info($safe);
         $adult = $safe->getAdult();
         $medical = $safe->getMedical();
         $spoof = $safe->getSpoof();
