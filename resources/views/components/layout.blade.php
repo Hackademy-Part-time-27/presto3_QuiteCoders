@@ -20,7 +20,7 @@
 <body class="pt-serif-regular">
     <x-navbar />
 
-    <div class="container mt-5">
+    <div class="container mt-5 min-vh-100">
         {{ $slot }}
     </div>
     {{ $extra ?? '' }}   

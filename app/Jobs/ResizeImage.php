@@ -5,6 +5,7 @@ namespace App\Jobs;
 use Spatie\Image\Image;
 use Illuminate\Bus\Queueable;
 use Spatie\Image\Enums\CropPosition;
+use Spatie\Image\Enums\AlignPosition;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -45,6 +46,9 @@ class ResizeImage implements ShouldQueue
 
         $croppedImage = Image::load($srcPath)
                         ->crop($w, $h, CropPosition::Center)
+                        ->watermark('watermark.png',
+                                AlignPosition::Center,
+                                alpha: 50)
                         ->save($destPath);
     }
 }
