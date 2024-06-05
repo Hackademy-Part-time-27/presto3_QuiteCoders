@@ -44,16 +44,17 @@
             </select>
         </div>
         <div class="mb-3">
+            <label for="image">Inserisci un'immagine</label>
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img">
             @error('temporary_images.*')
             <p class="text-danger mt-2">{{ $message }}</p>
             @enderror
         </div>
         @if (!empty($images))
-        <label for="image">Inserisci un immagine</label>
+        
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mb-3">
                 <p>Photo preview:</p>
                     <div class="row border border-4 border-info rounded shadow py-4">
                         @foreach ($images as $key => $image)

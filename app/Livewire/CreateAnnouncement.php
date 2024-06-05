@@ -31,8 +31,8 @@ class CreateAnnouncement extends Component
 
     
     protected $rules = [
-        'title' =>'required|min:4',
-        'body' =>'required|min:4',
+        'title' =>'required|min:4|max:20',
+        'body' =>'required|min:4|max:250',
         'category' =>'required',
         'price' =>'required|numeric',
     ];
@@ -40,6 +40,8 @@ class CreateAnnouncement extends Component
     protected $messages = [
         'required' =>'Il campo :attribute è richiesto',
         'min' => 'Il campo :attribute deve contenere almeno 4 caratteri',
+        'title.max' => 'Il campo :attribute deve contenere massimo 20 caratteri',
+        'body.max' => 'Il campo :attribute deve contenere massimo 250 caratteri',
         'numeric' => 'Il campo :attribute dev\'essere un numero',
         'temporary_images.required' => 'L\'immagine è richiesta',
         'temporary_images.*.image' => 'I file devono essere immagini',

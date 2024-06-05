@@ -10,8 +10,9 @@
         <div class="legal">
           <span> © 2024 All rights reserved </span>
           <a> Hackademy </a>
-          <a> part-time-27 </a>
+          <a> Part-time-27 </a>
           <strong> AULAB </strong>
         </div>
       </footer>
+      
 </section>

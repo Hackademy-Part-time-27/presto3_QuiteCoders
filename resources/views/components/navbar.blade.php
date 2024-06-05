@@ -13,13 +13,15 @@
                         <b>{{ __('ui.categories') }}</b>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
-                        @foreach($categories as $category)
-                        <li>
-                            <a href="{{ route('category.show', compact('category')) }}" class="dropdown-item">
-                                <b>{{ $category->name }}</b>
-                            </a>
-                            <hr class="dropdown-divider">
-                        </li>
+                        @foreach($categories as $index => $category)
+                            <li>
+                                <a href="{{ route('category.show', compact('category')) }}" class="dropdown-item">
+                                    <b>{{ $category->name }}</b>
+                                </a>
+                                @if($index < count($categories) - 1)
+                                    <hr class="dropdown-divider">
+                                @endif
+                            </li>
                         @endforeach
                     </ul>
                 </li>
