@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use Spatie\Image\Image;
+use Spatie\Image\Enums\Unit;
 use Illuminate\Bus\Queueable;
 use Spatie\Image\Enums\CropPosition;
 use Spatie\Image\Enums\AlignPosition;
@@ -46,11 +47,15 @@ class ResizeImage implements ShouldQueue
 
         $croppedImage = Image::load($srcPath)
                         ->crop($w, $h, CropPosition::Center)
-                        ->watermark('resources/img/watermark.png',
-                                AlignPosition::Bottom_left,
+                        ->watermark('resources/img/Smiley.svg.png',
+                                AlignPosition::BottomLeft,
                                 paddingX: 10,
                                 paddingY: 10,
                                 paddingUnit: Unit::Percent,
+                                width: 100,
+                                widthUnit: Unit::Percent,
+                                height: 50,
+                                heightUnit: Unit::Percent,
                                 alpha: 50)
                         ->save($destPath);
     }

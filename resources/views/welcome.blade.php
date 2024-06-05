@@ -10,6 +10,15 @@
                     </div>
                 @endif
                 <p class="h2 my-2 mt-5 fw-bold">{{__('ui.allAnnouncements')}}</p>
+
+                @guest
+                <div class="mt-5 fs-3">
+                    <a class="nav-link active text-white" href="{{ route('announcements.create') }}">
+                        <i class="fa-solid fa-circle-plus"></i> {{ __('ui.newAnnouncement') }}
+                    </a>
+                </div>
+                @endguest
+                
                 <div class="row">
                     @forelse ($announcements as $announcement)
                         <div class="col-12 col-md-4 my-4 mt-5">
