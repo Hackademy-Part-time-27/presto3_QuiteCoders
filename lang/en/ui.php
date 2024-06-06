@@ -13,5 +13,5 @@ return [
     'view' => 'View',
     'newAnnouncement' => 'New listing',
     'auditorArea' => 'Auditor area',
-    'workWithUs' => 'Work with us!'
+    'workWithUs' => 'Work with us!',
 ];

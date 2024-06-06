@@ -13,5 +13,5 @@ return [
     'view' => 'Visualizza',
     'newAnnouncement' => 'Nuovo annuncio',
     'auditorArea' => 'Zona revisore',
-    'workWithUs' => 'Lavora con noi!'
+    'workWithUs' => 'Lavora con noi!',
 ];
