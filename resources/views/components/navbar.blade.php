@@ -107,7 +107,7 @@
                             </g>
                         </svg>
                     </span> 
-                    <input id="query" class="form-control" type="search" placeholder="{{ __('ui.search') }}" name="searched">
+                    <input id="query" class="form-control border border-0" type="search" placeholder="{{ __('ui.search') }}" name="searched">
                 </div>
                 <button class="btn btn-outline-light" type="submit">{{ __('ui.search') }}</button>
             </form>
