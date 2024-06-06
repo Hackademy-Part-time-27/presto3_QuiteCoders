@@ -31,7 +31,7 @@
                                     <p class="bianco" >{{ $announcement->price }} €</p>
                                     <a href="{{ route('announcements.show', $announcement) }}" class="but link-offset-2 link-underline link-underline-opacity-0">{{__('ui.view')}}</a>
                                     <p class="m-3">
-                                    <a href="{{ route('category.show', ['category'=>$announcement->category]) }}" class="link-offset-2 link-underline link-underline-opacity-0">{{ $announcement->category->name }}</a>
+                                    <a href="{{ route('category.show', ['category'=>$announcement->category]) }}" class="link-offset-2 link-underline link-underline-opacity-0">{{ __('ui.categoria_' . $announcement->category->id)}}</a>
                                     </p>
                                     <p class="bianco">{{__('ui.published')}} {{ $announcement->created_at
                                     ->format('d/m/Y') }}</p>

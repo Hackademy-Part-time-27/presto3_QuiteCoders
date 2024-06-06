@@ -14,7 +14,9 @@
             <label for="title">Titolo Annuncio</label>
             <input wire:model.live="title" type="text" class="form-control @error('title') is-invalid @enderror" >
             @error('title')
+            <span class="text-danger">
                 {{$message}}
+            </span>
             @enderror
         </div>
         
@@ -22,7 +24,9 @@
             <label for="body">Descrizione</label>
             <textarea wire:model.live="body" class="form-control @error('body') is-invalid @enderror"></textarea>
             @error('body')
+            <span class="text-danger">
                 {{$message}}
+            </span>
             @enderror
         </div>
 
@@ -30,7 +34,9 @@
             <label for="price">Prezzo</label>
             <input wire:model.live="price" type="number" step="0.01" class="form-control @error('price') is-invalid @enderror">
             @error('price')
+            <span class="text-danger">
                 {{$message}}
+            </span>
             @enderror
         </div>
 
@@ -47,7 +53,9 @@
             <label for="image">Inserisci un'immagine</label>
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img">
             @error('temporary_images.*')
-            <p class="text-danger mt-2">{{ $message }}</p>
+            <span class="text-danger">
+                <p class="text-danger mt-2">{{ $message }}</p>
+            </span>
             @enderror
         </div>
         @if (!empty($images))

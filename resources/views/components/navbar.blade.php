@@ -34,7 +34,7 @@
                         @foreach($categories as $index => $category)
                             <li>
                                 <a href="{{ route('category.show', compact('category')) }}" class="dropdown-item">
-                                    <b>{{ $category->name }}</b>
+                                    <b>{{ __('ui.categoria_' . $category->id)}}</b>
                                 </a>
                                 @if($index < count($categories) - 1)
                                     <hr class="dropdown-divider">
@@ -84,7 +84,7 @@
                         <li>
                             <form action="/logout" method="POST">
                                 @csrf
-                                <button type="submit" class="dropdown-item">Esci</button>
+                                <button type="submit" class="dropdown-item">{{ __('ui.logout') }}</button>
                             </form>
                         </li>
                     </ul>
