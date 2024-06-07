@@ -4,7 +4,7 @@
     <input class="input " type="radio" name="item" value="1" checked>
     
     <div>
-      <img src="{{ $image->getUrl(400,300) }}">
+      <img src="{{ $image->getUrl(400,267) }}">
     </div>
     @endforeach
 

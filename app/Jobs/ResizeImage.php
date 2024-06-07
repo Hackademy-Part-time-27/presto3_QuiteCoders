@@ -47,8 +47,8 @@ class ResizeImage implements ShouldQueue
 
         $croppedImage = Image::load($srcPath)
                         ->crop($w, $h, CropPosition::Center)
-                        ->watermark('resources/img/Smiley.svg.png',
-                                AlignPosition::BottomLeft,
+                        ->watermark('resources/img/mark.png',
+                                AlignPosition::Center,
                                 paddingX: 10,
                                 paddingY: 10,
                                 paddingUnit: Unit::Percent,
@@ -56,7 +56,7 @@ class ResizeImage implements ShouldQueue
                                 widthUnit: Unit::Percent,
                                 height: 50,
                                 heightUnit: Unit::Percent,
-                                alpha: 50)
+                                alpha: 30)
                         ->save($destPath);
     }
 }

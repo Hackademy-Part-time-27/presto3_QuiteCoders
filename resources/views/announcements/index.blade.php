@@ -15,7 +15,7 @@
                         <div class="col-12 col-md-4 my-4 mt-5">
                             <div class="card">
                                 <div class="card2">
-                                <img class="cane img-fluid rounded" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200' }}" class="card-image-top p-3 rounded" alt="...">
+                                <img class="cane img-fluid rounded" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,267) : 'https://picsum.photos/200' }}" class="card-image-top p-3 rounded" alt="...">
                                 <div class="corpo">
                                     <h5 class="bianco" >{{ $announcement->title }}</h5>
                                     <p class="bianco" >{{ $announcement->body }}</p>
@@ -26,7 +26,11 @@
                                     </p>
                                     <p class="bianco">{{__('ui.published')}} {{ $announcement->created_at
                                     ->format('d/m/Y') }}</p>
+                                  
+                                
+                                
                                 </div>
+                                
                                 
                                 </div>
                             </div>
@@ -48,8 +52,16 @@
                     </div>-->
 
                     @endforelse
-                    {{ $announcements->links() }}
             </div>
+            <div class="row mm">
+                <div class="col-lg-6">
+                    <div class="mt-2">
+                    {{ $announcements->links() }}
+                    </div>
+                </div>
+            </div>
+          
         </div>
+     
     </div>                               
 </x-layout>

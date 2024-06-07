@@ -1,17 +1,17 @@
 <x-layout>
-    <h1 class="container text-center">
+    <h1 class=" text-center m-5">
         {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
     </h1>
     @if($announcement_to_check)
         <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="corpo col-12">
                     @if ($announcement_to_check->images)
                             @foreach($announcement_to_check->images as $image)
                                         {{--<input class="input " type="radio" name="item" value="1" checked>--}}
                                         <div class="row my-5">
                                            <div class="col-6">
-                                    <img src="{{ $image->getUrl(400, 300) }}">
+                                    <img src="{{ $image->getUrl(400, 267) }}">
                                 </div>
                                 <div class="col-3">
                                     <h5 class="tc-accent ">
@@ -43,16 +43,19 @@
                     @endif
                 </div>
             </div>
-            <div class="row">
-                <h5 class="card-title">Titolo: {{ $announcement_to_check->title }}</h5>
-                <p class="card-text">Descrizione: {{ $announcement_to_check->body }}</p>
-                <p class="card-footer">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+            <div class="row margi">
+                <div class="col-12 ">
+                <h3 class="card-title">Titolo: {{ $announcement_to_check->title }}</h3>
+                <p class="card-text ms-4">Descrizione: {{ $announcement_to_check->body }}</p>
+                <p class="card-footer ms-4">Pubblicato il: {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                </div>
+                
             </div>
                                         
                                     
                     
            
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12 col-md-6">
                     <form action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
                     method="POST">
@@ -70,5 +73,7 @@
                 </form>
             </div>
         </div>
+        </div>
+        <div class="scrol"></div>
     @endif
 </x-layout>

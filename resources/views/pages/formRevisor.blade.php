@@ -8,7 +8,7 @@
 @if (Auth::user()->is_revisor)
 
 <div class="text-center">
-    Sei già un revisore!
+    <h2>Sei già revisore</h2>
 </div>
 @else
 
@@ -21,7 +21,7 @@
      <div class="py-4">
         <label for="email">Email</label>
      </div>
-     <input class="form-control" type="email" name="email" id="email" value="{{ auth()->user()->email }}">
+     <input class="form-control" disabled type="email" name="email" id="email" value="{{ auth()->user()->email }}">
     
      
      @error('email') <span class="small text-danger">{{ $message }}</span> @enderror</span>

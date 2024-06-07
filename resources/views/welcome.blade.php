@@ -24,7 +24,7 @@
                         <div class="col-12 col-md-4 my-4 mt-5">
                             <div class="card">
                                 <div class="card2">
-                                <img class="cane img-fluid rounded" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200' }}" alt="...">
+                                <img class="cane img-fluid rounded" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,267) : 'https://picsum.photos/200' }}" alt="...">
                                 <div>
                                     <h5 class="bianco" >{{ $announcement->title }}</h5>
                                     <p class="bianco" >{{ $announcement->body }}</p>
